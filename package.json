@@ -1,0 +1,30 @@
+{
+  "name": "newtranslab",
+  "version": "0.0.1",
+  "description": "ejecicio translab con test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "bip"
+  ],
+  "author": "Carolina Torres",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carocromatica/translab_test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carocromatica/translab_test/issues"
+  },
+  "homepage": "https://github.com/carocromatica/translab_test#readme"
+}
