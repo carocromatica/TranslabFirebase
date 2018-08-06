@@ -17,6 +17,14 @@ window.validateEmail = function(email){
 
   }
 
+  const rejected = "!#$%^&*()+=-[]\\\';,/{}|\":<>?"
+
+  for (var i = 0; i < email.length; i++) {
+    if (rejected.indexOf(email.charAt(i)) != -1) {
+        return false;
+    }
+}
+
   if (email==""){
     return false
 

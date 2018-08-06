@@ -22,23 +22,21 @@ describe('Validar emails', () => { //Describe lo que habrá dentro de cada funci
             });
         }));
 
-        describe('Debería verificar que tenga al menos 1 caracter antes del arroba', () => {
-            it('Obtiene un caracter antes de la @', ()=>{
-                assert.equal(validateEmail('@asdf.com'), false);
-            })
-            
-        });
+    describe('Debería verificar que tenga al menos 1 caracter antes del arroba', () => {
+        it('Obtiene un caracter antes de la @', () => { //test caro
+            assert.equal(validateEmail('@asdf.com'), false);
+        })
+    });
 
     describe('Debería verificar que no tenga carácteres raros', () => {
-
+        it('no existe !#$%^&*()+=-[]\\\';,/{}|\":<>? en el email', () => {
+            assert.equal(validateEmail('as*df@asdf.com'), false);
+        })
     });
 });
 
 
 // primer test de caro ;_;
-
-
-
 
 describe("Funciones de main.js", () => {//Llamar a la función que quiero testear
     const calcularTarifa = require('../src/js/main');
