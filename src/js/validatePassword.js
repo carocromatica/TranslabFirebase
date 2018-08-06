@@ -11,9 +11,9 @@ validatePassword = function (pass) {
   }
 
   // para solicitar mayusculas y números
-  const mayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  const mayusnumber = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
   for (var i = 0; i < pass.length; i++) { // se parece al data dashboard :D
-      if (rejected.indexOf(pass.charAt(i)) != -1) {
+      if (mayusnumber.indexOf(pass.charAt(i)) == -1) {
           return false;
       }
   }
