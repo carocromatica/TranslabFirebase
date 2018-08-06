@@ -33,17 +33,20 @@ describe('Validar emails', () => { //Describe lo que habrá dentro de cada funci
 // primer test de caro ;_;
 
 
-const experimento = require('../src/js/validate');
-describe("experimento()", () => {//Llamar a la función que quiero testear
-    it("experimento es una funcion", () => {
-        assert.ok(experimento);
-    })
 
-    it("debería retornar holi", () => {
-        assert.equal(experimento('holi'), true)
+describe("Funciones de main.js", () => {//Llamar a la función que quiero testear
+    const calcularTarifa = require('../src/js/main');
+    it("calcularTarifa es una función", () => {
+        assert.ok(calcularTarifa);
+    })
+    const horarios = require('../src/js/main');
+    it("horarios es una función", () => {
+        assert.ok(horarios);
     })
     
 });
+
+
 
 
 
