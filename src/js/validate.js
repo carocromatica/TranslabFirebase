@@ -41,10 +41,4 @@ validateEmail = function (email) {
     return true;
 };
 
-function validatePassword(password){
-
-    if (password == "asdfghj") {
-        return false;
-    }
-}
 
