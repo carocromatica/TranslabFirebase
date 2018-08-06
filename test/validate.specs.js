@@ -52,9 +52,15 @@ describe("Funciones de main.js", () => {//Llamar a la función que quiero testea
 // test de caro para validar contraseñas
 
 const validatePassword= require('../src/js/validatePassword')
-describe('Test para validar contraseñas', () => {
-    it('Contraseña tiene al menos 8 caracteres', () => { //test de caro
-        assert.equal(validatePassword ('asdfghj'),false);
+describe('Funciones de validatePassword.js', () => {
+
+    it("validatePassword es una función", () => {
+        assert.ok(validatePassword);
+    });
+
+    it('Contraseña no acepta asdfghjk, 12345678', () => { //test de caro
+        assert.equal(validatePassword ('asdfghjk'),false);
+        assert.equal(validatePassword ('12345678'),false);
 });
 }
 )
