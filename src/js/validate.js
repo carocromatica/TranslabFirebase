@@ -26,8 +26,9 @@ window.validateEmail = function(email){
   return true;
 };
 
-function experimento(){
-  let challa="asd";
-  return challa
+function experimento(challa){
+  if (challa=='holi'){
+  return true;}
 }
 
+module.exports.experimento = experimento;
