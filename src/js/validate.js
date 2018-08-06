@@ -8,9 +8,19 @@ window.validateEmail = function(email){
       return false; //Si es distinto de 2, será false
   }
 
-  if(tokens[1].indexOf('.') < 0){
+  if(tokens[1].indexOf('.') < 0){// si no tiene puntos
       return false;
   }
+
+  if (tokens[0]==""){
+      return false
+
+  }
+
+  if (email==""){
+    return false
+
+}
 
   const domTokens = tokens[1].split('.');
   if(domTokens.length != 2){
@@ -26,9 +36,5 @@ window.validateEmail = function(email){
   return true;
 };
 
-function experimento(challa){
-  if (challa=='holi'){
-  return true;}
-}
 
-module.exports.experimento = experimento;
+

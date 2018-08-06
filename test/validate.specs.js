@@ -21,16 +21,22 @@ describe('Validar emails', () => { //Describe lo que habrá dentro de cada funci
                 assert.equal(validateEmail('asdf@asdf.'), false);
             });
         }));
+
+        describe('Debería verificar que tenga al menos 1 caracter antes del arroba', () => {
+            it('Obtiene un caracter antes de la @', ()=>{
+                assert.equal(validateEmail('@asdf.com'), false);
+            })
+            
+        });
+
     describe('Debería verificar que no tenga carácteres raros', () => {
 
-    }); (
-        describe('Debería verificar que tenga al menos 1 caracter antes del arroba', () => {
-
-        }));
+    });
 });
 
 
 // primer test de caro ;_;
+
 
 
 
@@ -43,7 +49,7 @@ describe("Funciones de main.js", () => {//Llamar a la función que quiero testea
     it("horarios es una función", () => {
         assert.ok(horarios);
     })
-    
+
 });
 
 
