@@ -23,18 +23,17 @@ describe('Validar emails', () => { //Describe lo que habrá dentro de cada funci
         }));
 
     describe('Debería verificar que tenga al menos 1 caracter antes del arroba', () => {
-        it('Obtiene un caracter antes de la @', () => { //test caro
+        it('Obtiene un caracter antes de la @', () => { //test de caro
             assert.equal(validateEmail('@asdf.com'), false);
         })
     });
 
-    describe('Debería verificar que no tenga carácteres raros', () => {
+    describe('Debería verificar que no tenga carácteres raros', () => { // test de caro
         it('no existe !#$%^&*()+=-[]\\\';,/{}|\":<>? en el email', () => {
             assert.equal(validateEmail('as*df@asdf.com'), false);
         })
     });
 });
-
 
 // primer test de caro ;_;
 
@@ -49,6 +48,16 @@ describe("Funciones de main.js", () => {//Llamar a la función que quiero testea
     })
 
 });
+
+// test de caro para validar contraseñas
+
+describe('password no es una serie del teclado',()=>{
+    const validatePassword = require('../src/js/validate');
+    it("las passwords no deben ser igual a asdfghj, qwertyu, zxcvbnm",()=>{
+        assert.equal(validatePassword('asdfghj'), false);
+        assert.equal(validatePassword('qwertyu'), false);
+        assert.equal(validatePassword('zxcvbnm'), false);    })
+})
 
 
 
