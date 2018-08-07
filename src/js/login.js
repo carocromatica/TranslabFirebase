@@ -19,7 +19,6 @@ function registerWithFirebase() {
       });
 }
 
-
 //Login
 function loginWithFirebase() {
   const emailValue = email.value;
@@ -28,7 +27,7 @@ function loginWithFirebase() {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
       .then(() => {
           console.log("Usuario inició sesión con éxito");
-          window.location = "home.html";
+         
       })
       .then(() => {
           if (passwordValue.length <= 7) {
@@ -41,3 +40,4 @@ function loginWithFirebase() {
           alert("Revisa todos los datos ingresados. Correo y contraseña son obligatorios.");
       });
 }
+
