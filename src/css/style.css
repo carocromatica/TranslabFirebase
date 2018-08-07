@@ -5,8 +5,76 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 } /* codigo pasa deshabilitar scroll de input number*/
 
-.altura{margin-top:35%;}
+.altura{margin-top:10%;}
+
+.valign-wrapper{min-height: calc(100vh - 64px)!important;}
 
 
 .title{text-align: center;
 font-size: 2em;}
+
+.material-icons{
+  padding-right: 1em;
+}
+
+.pad{
+  padding: 0!important;
+}
+
+.input-field {
+  position: relative!important;
+  margin-top: 1.5rem!important;
+  margin-bottom: 0!important;
+}
+
+/* CAMBIAR COLOR PREDETERMINADO DE INPUTS*/
+  /* label color */
+  .input-field label {
+    color: grey;
+  }
+
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #f57f17!important;
+   
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #f9a825!important;
+    box-shadow: 0 1px 0 0 #f57f17!important;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #f57f17!important;
+    box-shadow: 0 1px 0 0 #f57f17!important;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000!important;
+    box-shadow: 0 1px 0 0 #000!important;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: green!important;
+  }
+
+  /* label focus color */
+  .input-field input[type=password]:focus + label {
+    color: #f57f17!important;
+  }
+  /* label underline focus color */
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #f9a825!important;
+    box-shadow: 0 1px 0 0 #f57f17!important;
+  }
+  /* valid color */
+  .input-field input[type=password].valid {
+    border-bottom: 1px solid #f57f17!important;
+    box-shadow: 0 1px 0 0 #f57f17!important;
+  }
+  /* invalid color */
+  .input-field input[type=password].invalid {
+    border-bottom: 1px solid #000!important;
+    box-shadow: 0 1px 0 0 #000!important;
+  }
+ 

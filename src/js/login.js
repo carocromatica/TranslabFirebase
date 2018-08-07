@@ -1,25 +1,24 @@
-// Registro
 function registerWithFirebase() {
-  const userValue=user.value;
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const name = username.value;
+  const mail = email.value;
+  const pass = password.value;
 
-  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue,userValue)
-      .then((users) => {
-          firebase.database().ref(`users/${users.user.uid}`).set({ 
-              mail: users.user.email, 
-              uid: users.user.uid, 
-              username: users.user.email, 
-
+  firebase.auth().createUserWithEmailAndPassword(mail, pass)
+      .then((userData) => {
+          firebase.database().ref(`usuarios/${userData.user.uid}`).set({
+              username: name,
+              mail: userData.user.email,
+              uid: userData.user.uid,
           });
-          console.log("usuario se creo"); // mail de confirmacion y login
+          console.log("usuario se creo")
       })
       .catch((error) => {
-          console.log("Error de Firebase > Codigo > " + error.code); // alert error
+          console.log("Error de Firebase > Codigo > " + error.code);
           console.log("Error de Firebase > Mensaje > " + error.message);
 
       });
 }
+
 
 //Login
 function loginWithFirebase() {

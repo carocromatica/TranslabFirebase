@@ -24,10 +24,17 @@
         </div>
 
         <div class="row white pad">
+
+            <div class="input-field col s12">
+                <input type="text" name="username" id="username" required />
+                <label for="username">
+                  <i class=" material-icons">person_outline</i>Correo eléctronico</label>
+              </div>
+
           <div class="input-field col s12">
-            <input type="text" name="username" id="email" required />
+            <input type="text" name="email" id="email" required />
             <label for="email">
-              <i class=" material-icons">person_outline</i>Correo eléctronico</label>
+              <i class=" material-icons">mail_outline</i>Correo eléctronico</label>
           </div>
 
           <div class="input-field col s12">
@@ -37,7 +44,7 @@
           </div>
 
           <div class="col s12 pad">
-            <button onclick="registerWithFirebase()" type="submit" name="btn_login" class="col s12 btn-large amber black-text waves-effect">INICIAR SESIÓN</button>
+            <button onclick="registerWithFirebase()" type="submit" name="btn_login" class="col s12 btn-large amber black-text waves-effect">REGISTRAR</button>
           </div>
 
 
