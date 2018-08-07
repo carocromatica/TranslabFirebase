@@ -11,6 +11,8 @@ function registerWithFirebase() {
               uid: userData.user.uid,
           });
           console.log("usuario se creo")
+          window.location = "../src/home.html";
+
       })
       .catch((error) => {
           console.log("Error de Firebase > Codigo > " + error.code);
@@ -27,11 +29,13 @@ function loginWithFirebase() {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
       .then(() => {
           console.log("Usuario inició sesión con éxito");
+          window.location = "../src/home.html";
          
       })
       .then(() => {
           if (passwordValue.length <= 7) {
               alert("Revisa todos los datos ingresados. Hubo un problema con el registro de Facebook.");
+
           }
       })
       .catch((error) => {
