@@ -44,30 +44,51 @@
 
   <div class="container">
     <div class="row">
-      <div class="col s12 offset-m4 m4">
-        <!-- inicio CONTENIDO variable-->
-   
-       
+      <div class= "container">
+        <div class="row">
+            <h5>Registro Visitas IF</h5>
+        </div>
+        <section class="row white">
 
-<p>PERFIL USUARIO</p>
-        <p>// numeros series bip de prueba : 18757476, 15487695, 23568974, 12456387 </p>
+            <div class=" input-field col m3 s12">
+                <input id="cardbip" type="text" class="white" placeholder="bip:">
+            </div>
 
-      
+            
 
-      </div>
-      <!-- FIN CONTENIDO variable-->
+           
+
+            <div class="input-field col m2">
+                <button  class="waves-effect btn yellow accent-3 grey-text text-darken-2 col s12 btnLogin" id="sendText" onclick="sendText()" value="Ingresar">Ingresar</button>
+            </div>
+
+        </section>
+
+
+        
+           
+
+            <div id="contenido" class="white">
+                
+            </div>
+    
+    </div>
+
+
+    </section>
 
     </div>
 
   </div>
 
-
-  </div>
-
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/calculo.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script src="js/firebaseApi.js"></script>
+  <script src="js/showdata.js"></script>
+  <script src="js/logout.js"></script>
+
+
 </body>
 
 </html>

@@ -79,6 +79,7 @@ function registerWithFirebase() {
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(() => {
             console.log("Usuario inició sesión con éxito");
+            window.location="home.html"
            
         })
         .then(() => {
