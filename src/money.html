@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TransLab</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
   <link rel="stylesheet" href="css/materialize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="grey lighten-2">
   <nav class="grey darken-3" role="navigation">
     <div class="nav-wrapper container">
@@ -46,23 +46,41 @@
     <div class="row">
       <div class="col s12 offset-m4 m4">
         <!-- inicio CONTENIDO variable-->
+        <div class="row pad">
 
-        <div class="row altura">
-          <a class="waves-effect waves-light btn-large amber darken-3 col s12" href="money.html">Ver Saldo</a> 
+              <div class="input-field col s12">
+                  <input type="text" id="bipCard" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                  <label for="email">
+                    <i class=" material-icons">credit_card</i>Ingresa tu bip</label>
+                </div>
+
+        <div class="input-field col s12">
+          <form>
+            <select id="selectorBip" class="browser-default" onclick="disableInput()">
+              <option value="" disabled selected >Elige una serie guardada</option>
+              <option >12457897</option>
+              <option >12659874</option>
+            </select>
+          </form>
         </div>
 
-        <div class="row">
-            <a class="waves-effect waves-light btn-large amber darken-3 col s12" href="account.html">Calcular Tarifa</a> 
-          </div>
+      </div>
+<div class="row">
+      <div class="col s10 offset-s1 center-align">
+        <button type="submit" id="btn" class="amber darken-3 btn"> Ver Saldo</button>
+      </div>
+    </div>
 
-          <div class="row">
-              <a class="waves-effect waves-light btn-large amber darken-3 col s12" href="profile.html">Perfil</a> 
-            </div>
+    <div class="row">
+        <div id="databip0" class="grey darken-3"></div>
+        <div id="databip2" class="amber darken-3"></div>
+     
+      </div>
+        <div id="alerta"></div>
+       
 
-            <div class="row">
-                <a class="waves-effect waves-light btn-large amber darken-3 col s12" href="faq.html">Preguntas Frecuentes</a> 
-              </div>
-        
+
+        <p>// numeros series bip de prueba : 18757476, 15487695, 23568974, 12456387 </p>
 
       
 
@@ -80,10 +98,8 @@
   <script src="js/materialize.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
   <script src="js/firebaseApi.js"></script>
-  <script src="js/sidebar.js"></script>
   <script src="js/getbip.js"></script>
   <script src="js/validate.js"></script>
-  <script src="js/logout.js"></script>
   <script src="js/login.js"></script>
 </body>
 
