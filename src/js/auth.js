@@ -3,14 +3,24 @@ window.onload = () => {
         if (user) {
             // User is signed in.
             console.log("user id: " + firebase.auth().currentUser.uid);
-        
-          
+            console.log("user id: " + firebase.auth().currentUser.email);
+            const usermail = firebase.auth().currentUser.email;
+            document.getElementById("userMail").innerHTML = usermail;
         } else {
             window.location = "index.html";
         }
     });
 
 }
+
+(function($){
+    $(function(){
+  
+      $('.sidenav').sidenav();
+  
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  
 
 //Logout
 
