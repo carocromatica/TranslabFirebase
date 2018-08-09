@@ -1,7 +1,8 @@
 
+
 window.onload = () => {
   //Base de datos para consultar 1 vez
-  firebase.database().ref("usuarios").child(currentUser.uid).child("BIPS")
+  firebase.database().ref(`usuarios/${currentUser.uid}/BIPS/${bipKey}`)
     .once("value")
     .then((tarjetas) => {
       console.log(JSON.stringify(tarjetas))
@@ -10,20 +11,27 @@ window.onload = () => {
       console.log("Database error >" + error);
     });
   
-  firebase.database().ref("usuarios").child(currentUser.uid).child("BIPS")
-    .on("child_added", (tarjetasBip) => {
+    firebase.database().ref("publicaciones")
+    .on("child_added", (nuevaTarjeta) => {
+        contenido.innerHTML = `
+        
+                       <p>${nuevaTarjeta.key}<p>
+                       <p>${nuevaTarjeta.bip}<p>>
+        
 
-      const bipIngresada=firebase.database().ref("usuarios").child(currentUser.uid).child("BIPS").key
-      console.log(bipIngresada);
+    ` + contenido.innerHTML;
     });
-};
+
+}
 
 
-
-function saveBip() { 
-  const bip= cardbip.value; 
+function saveBip() {
+  const bip = cardbip.value;
   const currentUser = firebase.auth().currentUser; // esta indica si estamos logeadas
-  firebase.database().ref("usuarios").child(currentUser.uid).child("BIPS").push({ 
-    bip, //objeto bip
+  const bipKey = firebase.database().ref("usuarios").child(currentUser.uid).child("BIPS").push().key;
+
+  firebase.database().ref(`usuarios/${currentUser.uid}/BIPS/${bipKey}`).set({
+    bip,
   });
+
 };
