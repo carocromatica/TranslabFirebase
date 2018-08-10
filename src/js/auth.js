@@ -1,17 +1,4 @@
-window.onload = () => {
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            // User is signed in.
-            console.log("user id: " + firebase.auth().currentUser.uid);
-            console.log("user id: " + firebase.auth().currentUser.email);
-            const usermail = firebase.auth().currentUser.email;
-            document.getElementById("userMail").innerHTML = usermail;
-        } else {
-            window.location = "index.html";
-        }
-    });
 
-}
 
 (function($){
     $(function(){

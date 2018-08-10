@@ -1,3 +1,37 @@
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        console.log("user id: " + firebase.auth().currentUser.uid);
+        console.log("user id: " + firebase.auth().currentUser.email);
+        const usermail = firebase.auth().currentUser.email;
+
+
+
+
+
+firebase.database().ref(`usuarios/${firebase.auth().currentUser.uid}/BIPS/`)
+.on("child_added", (nuevaTarjeta) => {
+
+  saldos.innerHTML = `
+  
+  <div id="${nuevaTarjeta}">
+  
+  <p>${nuevaTarjeta.val().bip}</p>
+
+  </div>
+
+` + saldos.innerHTML;
+
+
+});
+
+
+
+
+    } else {
+        window.location = "index.html";
+    }
+});
 let saldoBip; // salgo actual del usuario
 let saldoFinal; // saldo al que se le resta valor del pasaje
 let valorPasaje; // cuando el usuario selecciona segun horario
@@ -56,9 +90,3 @@ document.getElementById("btn").onclick = function verSaldo() { // cuando se hace
     // fin fetch
 
 } // fin llamada boton
-
-
-
-
-
-

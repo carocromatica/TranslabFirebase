@@ -1,37 +1,44 @@
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+      // User is signed in.
+      console.log("user id: " + firebase.auth().currentUser.uid);
+      console.log("user id: " + firebase.auth().currentUser.email);
+      const usermail = firebase.auth().currentUser.email;
 
 
-window.onload = () => {
-  //Base de datos para consultar 1 vez
-  firebase.database().ref(`usuarios/${currentUser.uid}/BIPS/${bipKey}`)
-    .once("value")
-    .then((tarjetas) => {
-      console.log(JSON.stringify(tarjetas))
-    })
-    .catch((error) => {
-      console.log("Database error >" + error);
-    });
-  
-    firebase.database().ref("publicaciones")
-    .on("child_added", (nuevaTarjeta) => {
-        contenido.innerHTML = `
-        
-                       <p>${nuevaTarjeta.key}<p>
-                       <p>${nuevaTarjeta.bip}<p>>
-        
-
-    ` + contenido.innerHTML;
-    });
-
-}
 
 
+
+firebase.database().ref(`usuarios/${firebase.auth().currentUser.uid}/BIPS/`)
+.on("child_added", (nuevaTarjeta) => {
+
+contenido.innerHTML = `
+
+<div id="${nuevaTarjeta}">
+
+<p>${nuevaTarjeta.val().bip}</p>
+
+</div>
+
+` + contenido.innerHTML;
+
+
+});
+
+
+
+
+  } else {
+      window.location = "index.html";
+  }
+});
 function saveBip() {
   const bip = cardbip.value;
   const currentUser = firebase.auth().currentUser; // esta indica si estamos logeadas
   const bipKey = firebase.database().ref("usuarios").child(currentUser.uid).child("BIPS").push().key;
 
   firebase.database().ref(`usuarios/${currentUser.uid}/BIPS/${bipKey}`).set({
-    bip,
+    bip 
   });
 
 };
