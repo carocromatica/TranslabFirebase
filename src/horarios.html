@@ -92,7 +92,7 @@
       <!-- FIN CONTENIDO variable-->
 
     </div>
-
+    <div id="horarios" class="white">ffg</div>
   </div>
 
 
@@ -100,8 +100,21 @@
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js//materialize/materialize.js"></script>
-  <script src="js/firebaseApi.js"></script>
-  <script src="js/horarios.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4wAzIMLFxcD-vPdlSbbES9VT4LCRuf4o",
+    authDomain: "translab-37ae5.firebaseapp.com",
+    databaseURL: "https://translab-37ae5.firebaseio.com",
+    projectId: "translab-37ae5",
+    storageBucket: "translab-37ae5.appspot.com",
+    messagingSenderId: "76498303546"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="js/horarios.js"></script>
   <script src="js/auth.js"></script>
 </body>
 

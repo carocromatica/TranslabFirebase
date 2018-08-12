@@ -6,9 +6,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         const usermail = firebase.auth().currentUser.email;
 
 
-
-
-
 firebase.database().ref(`usuarios/${firebase.auth().currentUser.uid}/BIPS/`)
 .on("child_added", (nuevaTarjeta) => {
 
