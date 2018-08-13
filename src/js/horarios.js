@@ -43,18 +43,9 @@ document.getElementById("btn").onclick = function calcularTarifa() {
 
           const dataBip = Object.values(data) // extrae la data de la api y me extrae solo los valores.
 
-          let numberBip = dataBip[0];
-          document.getElementById("databip").innerHTML = 'numero de bip ' + numberBip;
-
-          let statusBip = dataBip[1];
-          document.getElementById("databip1").innerHTML = 'Status ' + statusBip;
 
           let amountBip = dataBip[2];
-          document.getElementById("databip2").innerHTML = 'saldo ' + amountBip;
-          saldoBip = Number(amountBip.replace(/[$,.]+/g, "")); // tranforma bip a number para calcular saldo
-
-          let dayBip = dataBip[3];
-          document.getElementById("databip3").innerHTML = 'fecha de carga ' + dayBip;
+          saldoBip = Number(amountBip.replace(/[$,.]+/g, "")); // tranforma bip a number para 
 
       })
 
@@ -62,27 +53,33 @@ document.getElementById("btn").onclick = function calcularTarifa() {
 
           let pasaje = document.getElementById("selector").value;
 
-          if (saldoBip <= 619) { // cuando no hay plata pal pasajeeeeeeeeeeee :al fiscalizador le gusta esto:
-              document.getElementById("alerta").innerHTML = "tu saldo final es: $" + saldoBip + " necesitas recargar";
+          if (saldoBip <= 619) { 
+              saldoFinal = saldoBip;
+              document.getElementById("alerta").innerHTML = "Tu saldo final"
+              document.getElementById("saldo").innerHTML = "$"+saldoFinal;
+              document.getElementById("cargar").innerHTML = "necesitas recargar"
           }
 
           else if (pasaje == "horario valle") {
               valorPasaje = 620;
               saldoFinal = saldoBip - valorPasaje;
               console.log(saldoFinal);
-              document.getElementById("alerta").innerHTML = "tu saldo final es: $" + saldoFinal;
+              document.getElementById("alerta").innerHTML = "Tu saldo final"
+              document.getElementById("saldo").innerHTML = "$"+saldoFinal;
 
           } else if (pasaje == "horario normal") {
               valorPasaje = 680;
               saldoFinal = saldoBip - valorPasaje;
               console.log(saldoFinal);
-              document.getElementById("alerta").innerHTML = "tu saldo final es: $" + saldoFinal;
+              document.getElementById("alerta").innerHTML = "Tu saldo final"
+              document.getElementById("saldo").innerHTML = "$"+saldoFinal;
 
           } else if (pasaje == "horario punta") {
               valorPasaje = 760;
               saldoFinal = saldoBip - valorPasaje;
               console.log(saldoFinal);
-              document.getElementById("alerta").innerHTML = "tu saldo final es: $" + saldoFinal;
+              document.getElementById("alerta").innerHTML = "Tu saldo final"
+              document.getElementById("saldo").innerHTML = "$"+saldoFinal;
 
           }
 

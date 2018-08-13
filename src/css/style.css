@@ -1,13 +1,11 @@
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  -moz-appearance: textfield;
-  margin: 0; 
-} /* codigo pasa deshabilitar scroll de input number*/
 
-.altura{margin-top:10%;}
+.altura{
+  margin-top:10%;
+}
 
-.valign-wrapper{min-height: calc(100vh - 64px)!important;}
+.valign-wrapper{
+  min-height: calc(100vh - 64px)!important;
+}
 
 
 .title{text-align: center;
@@ -29,6 +27,32 @@ font-size: 2em;}
   margin: 10px;
 }
 
+
+.banner-profile{
+  height: 150px;
+  margin-bottom:20px;
+  padding-top: 50px;
+}
+
+span{
+  font-size: 2em;
+
+  color: white;
+  font-weight: bold;
+}
+
+.saldo{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.saldo-total{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+
+}
 /*acordion*/
 
 .accordion {
@@ -59,6 +83,7 @@ font-size: 2em;}
   margin-top: 1.5rem!important;
   margin-bottom: 0!important;
 }
+
 
 /* CAMBIAR COLOR PREDETERMINADO DE INPUTS*/
   /* label color */
