@@ -3,21 +3,21 @@ firebase.auth().onAuthStateChanged(function(user) {
         // User is signed in.
         console.log("user id: " + firebase.auth().currentUser.uid);
         console.log("user id: " + firebase.auth().currentUser.email);
-        const usermail = firebase.auth().currentUser.email;
+     
 
 
 firebase.database().ref(`usuarios/${firebase.auth().currentUser.uid}/BIPS/`)
 .on("child_added", (nuevaTarjeta) => {
 
-  saldos.innerHTML = `
+    selectorBip.innerHTML = `
   
-  <div id="${nuevaTarjeta}">
   
-  <p>${nuevaTarjeta.val().bip}</p>
+  
+  <option>${nuevaTarjeta.val().bip}</option>
 
-  </div>
 
-` + saldos.innerHTML;
+
+` + selectorBip.innerHTML;
 
 
 });

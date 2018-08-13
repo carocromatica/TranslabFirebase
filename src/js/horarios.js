@@ -7,15 +7,16 @@ firebase.auth().onAuthStateChanged(function(user) {
 firebase.database().ref(`usuarios/${firebase.auth().currentUser.uid}/BIPS/`)
 .on("child_added", (nuevaTarjeta) => {
 
-horarios.innerHTML = `
+    selectorBip.innerHTML = `
   
-  <div id="${nuevaTarjeta}">
   
-  <p>${nuevaTarjeta.val().bip}</p>
-
-  </div>
-
-` + horarios.innerHTML;
+  
+    <option>${nuevaTarjeta.val().bip}</option>
+  
+  
+  
+  ` + selectorBip.innerHTML;
+  
 
 
 });
