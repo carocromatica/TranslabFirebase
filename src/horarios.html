@@ -46,39 +46,39 @@
     <div class="row">
       <div class="col s12 offset-m4 m4">
         <!-- inicio CONTENIDO variable-->
-   
+
         <div class="row altura">
-        <div class="input-field col s6">
+          <div class="input-field col s6">
             <form>
               <select id="selectorBip" class="browser-default">
-                <option value="" disabled selected >Elige una tarjeta</option>
-          
+                <option value="" disabled selected>Elige una tarjeta</option>
+
               </select>
             </form>
           </div>
-  
+
           <div class="input-field col s6">
-          <form>
-            <select id="selector" onchange="horarios()" class="browser-default">
-                <option value="" disabled selected >Elige un horario</option>
-              <option>horario valle</option>
-              <option>horario normal</option>
-              <option>horario punta</option>
-            </select>
-          </form>
+            <form>
+              <select id="selector" onchange="horarios()" class="browser-default">
+                <option value="" disabled selected>Elige un horario</option>
+                <option>horario valle</option>
+                <option>horario normal</option>
+                <option>horario punta</option>
+              </select>
+            </form>
           </div>
         </div>
 
-          <div class="row">
-              <div class="col s12 offset-m4 m4">
-            <button type="submit" id="btnCalculo" class="amber darken-3 btn"> Calcular</button>
+        <div class="row">
+          <div class="col s12 offset-m4 m4">
+            <button type="submit" id="btn" class="amber darken-3 btn"> Calcular</button>
           </div>
         </div>
-          </br>
+        </br>
 
-       
-        </div>
-        <div class="col s12 offset-m4 m4">
+
+      </div>
+      <div class="col s12 offset-m4 m4">
         <div id="databip"></div>
         <div id="databip1"></div>
         <div id="databip2"></div>
@@ -86,12 +86,12 @@
 
         <div id="alerta"></div>
         <div id="saldo"></div>
-</div>
       </div>
-      <!-- FIN CONTENIDO variable-->
-
     </div>
-    <div id="horarios" class="white">ffg</div>
+    <!-- FIN CONTENIDO variable-->
+
+  </div>
+
   </div>
 
 
@@ -99,21 +99,9 @@
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js//materialize/materialize.js"></script>
-
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC4wAzIMLFxcD-vPdlSbbES9VT4LCRuf4o",
-    authDomain: "translab-37ae5.firebaseapp.com",
-    databaseURL: "https://translab-37ae5.firebaseio.com",
-    projectId: "translab-37ae5",
-    storageBucket: "translab-37ae5.appspot.com",
-    messagingSenderId: "76498303546"
-  };
-  firebase.initializeApp(config);
-</script>
-    <script src="js/horarios.js"></script>
+  <script src="js/firebaseApi.js"></script>
+  <script src="js/horarios.js"></script>
   <script src="js/auth.js"></script>
 </body>
 
