@@ -45,7 +45,7 @@ document.getElementById("btnCalculo").onclick = function verSaldo() {
 
     //////////////////// despliegue de info ///////////////////////
 
-    fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${numberBip}`) 
+    fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${numberBip}`) 
         .then(function (response) {
             return response.json();
         })

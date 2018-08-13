@@ -34,7 +34,7 @@ document.getElementById("btn").onclick = function calcularTarifa() {
 
   //////////////////// despliegue de info ///////////////////////
 
-  fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${numberBip}`) 
+  fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${numberBip}`) 
       .then(function (response) {
           return response.json();
       })
