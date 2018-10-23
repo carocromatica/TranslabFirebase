@@ -2,5 +2,5 @@
 
 Proyecto Translab con firebase
 
-![Translab](https://carocromatica.github.io/svg/translab.png)
+![Translab](https://camo.githubusercontent.com/fe2e20f642c34b4813ace77d3b080c47b82c2816/68747470733a2f2f6361726f63726f6d61746963612e6769746875622e696f2f7376672f7472616e736c61622e706e67)
 
