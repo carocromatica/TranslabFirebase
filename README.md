@@ -2,5 +2,5 @@
 
 Proyecto Translab con firebase
 
-![Translab](https://camo.githubusercontent.com/fe2e20f642c34b4813ace77d3b080c47b82c2816/68747470733a2f2f6361726f63726f6d61746963612e6769746875622e696f2f7376672f7472616e736c61622e706e67)
+![Translab](https://user-images.githubusercontent.com/17170637/47379689-fa42f080-d6d1-11e8-952f-167a47a43e61.png)
 
